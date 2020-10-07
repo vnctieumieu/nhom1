@@ -45,6 +45,6 @@ int tich(int a, int b) {
 	return a * b;
 }
 
-int thuong(int a, int b){
+float thuong(int a, int b){
 	return a/b;
 }
