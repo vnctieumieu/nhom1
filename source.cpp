@@ -24,7 +24,7 @@ int main()
 		cout a << " * " << b << " = " << tich(a,b) << endl;
 		break;
 	case '/':
-
+		cout<<a<<" / "<<b" = "<< a/b<<endl;
 		break;
 	default:
 		cout << "Chon sai phep toan";
