@@ -21,7 +21,7 @@ int main()
 
 		break;
 	case '*':
-
+		cout a << " * " << b << " = " << tich(a,b) << endl;
 		break;
 	case '/':
 
@@ -31,4 +31,8 @@ int main()
 		break;
 	}
 	return 0;
+}
+
+int tich(int a, int b) {
+	return a * b;
 }
