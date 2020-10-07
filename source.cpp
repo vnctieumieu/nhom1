@@ -28,7 +28,7 @@ int main()
 		cout a << " * " << b << " = " << tich(a,b) << endl;
 		break;
 	case '/':
-		cout<<a<<" / "<<b" = "<< thuong(a,b)<<endl;
+		cout<<a<<" / "<<b<<" = "<< thuong(a,b)<<endl;
 		break;
 	default:
 		cout << "Chon sai phep toan";
