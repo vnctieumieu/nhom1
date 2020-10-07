@@ -25,7 +25,7 @@ int main()
 		cout << a << "-" << b << "= " << hieu(a,b) << endl;
 		break;
 	case '*':
-		cout a << " * " << b << " = " << tich(a,b) << endl;
+		cout << a << " * " << b << " = " << tich(a,b) << endl;
 		break;
 	case '/':
 		cout<<a<<" / "<<b<<" = "<< thuong(a,b)<<endl;
