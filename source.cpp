@@ -21,7 +21,7 @@ int main()
 		cout << a << "-" << b << "= " << hieu(a,b) << endl;
 		break;
 	case '*':
-
+		cout a << " * " << b << " = " << tich(a,b) << endl;
 		break;
 	case '/':
 
@@ -35,4 +35,8 @@ int main()
 
 int hieu(int a, int b){
 	return a-b;
+}
+
+int tich(int a, int b) {
+	return a * b;
 }
