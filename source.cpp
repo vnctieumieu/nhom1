@@ -22,10 +22,10 @@ int main()
 		cout << "Tong " << a << " & " << b <<" = " << tong(a,b);
 		break;
 	case '-':
-
+		cout << a << "-" << b << "= " << hieu(a,b) << endl;
 		break;
 	case '*':
-
+		cout a << " * " << b << " = " << tich(a,b) << endl;
 		break;
 	case '/':
 
@@ -35,4 +35,12 @@ int main()
 		break;
 	}
 	return 0;
+}
+
+int hieu(int a, int b){
+	return a-b;
+}
+
+int tich(int a, int b) {
+	return a * b;
 }
