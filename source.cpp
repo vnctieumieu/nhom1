@@ -60,3 +60,6 @@ float chuvihcn(int dai, int rong)
 		cout<<"chu vi hinh chu nhat la"<<(dai+rong)*2;
 		
 }
+float chuViHinhTron(int a){
+	return 2*3.14*a;
+}
