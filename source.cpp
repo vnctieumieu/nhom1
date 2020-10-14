@@ -15,7 +15,7 @@ int main()
 	char phepToan;
 	cout << "Nhap 2 so nguyen: ";
 	cin >> a >> b;
-	cout << "Tinh gi? (+,-,*,/) ";
+	cout << "Tinh gi? (+,-,*,/,cvhcn,cvhv,cvht) ";
 	cin >> ch;
 	switch (phepToan)
 	{
@@ -31,8 +31,15 @@ int main()
 	case '/':
 		cout<<a<<" / "<<b<<" = "<< thuong(a,b)<<endl;
 		break;
+	case 'cvhcn':
+		count << "chu vi hinh chu nhat: " << chuvihcn(a, b) << endl;
+		break;
 	case 'cvhv':
 		count << "chu vi hinh vuong: " << chuViHinhVuong(a) << endl;
+		break;
+	case 'cvht':
+		count << "chu vi hinh tron: " << chuViHinhTron(r) << endl;
+		break;
 	default:
 		cout << "Chon sai phep toan";
 		break;
@@ -54,13 +61,10 @@ float thuong(int a, int b){
 
 
 float chuvihcn(int dai, int rong)
-{
-		cout<<"nhap chieu dai:"<<endl;
-		cin>>dai;
-		cout<<"nhap chieu rong:"<<endl;
-		cin>>rong;
-		cout<<"chu vi hinh chu nhat la"<<(dai+rong)*2;
-		
+{	
+	    int kq = ( dai + rong ) * 2;
+		cout<<"chu vi hinh chu nhat la"<< kq ; // lan sau kg dc nhap xuat tham so truyen trong ham va khong dc cout trong ham.
+		return kq;
 }
 
 float chuViHinhTron(int a){
