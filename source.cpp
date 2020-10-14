@@ -8,7 +8,7 @@ int tong(int a, int b){
 int hieu(int a, int b);
 int tich(int a, int b);
 float thuong(int a, int b);
-int chuViHinhVuong(int a);
+float chuvihcn(int dai, int rong);
 int main()
 {
 	int a, b;
@@ -31,9 +31,6 @@ int main()
 	case '/':
 		cout<<a<<" / "<<b<<" = "<< thuong(a,b)<<endl;
 		break;
-	case 'cvhv':
-		cout << "Chu vi hinh vuong: " << chuViHinhVuong(a) << endl;
-		break;
 	default:
 		cout << "Chon sai phep toan";
 		break;
@@ -53,6 +50,13 @@ float thuong(int a, int b){
 	return a/b;
 }
 
-int chuViHinhVuong(int a) {
-	return a*4;
+
+float chuvihcn(int dai, int rong)
+{
+		cout<<"nhap chieu dai:"<<endl;
+		cin>>dai;
+		cout<<"nhap chieu rong:"<<endl;
+		cin>>rong;
+		cout<<"chu vi hinh chu nhat la"<<(dai+rong)*2;
+		
 }
