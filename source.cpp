@@ -9,6 +9,7 @@ int hieu(int a, int b);
 int tich(int a, int b);
 float thuong(int a, int b);
 float chuvihcn(int dai, int rong);
+int luyenTapPhepCong();
 int main()
 {
 	int a, b;
@@ -33,6 +34,8 @@ int main()
 		break;
 	case 'cvhv':
 		count << "chu vi hinh vuong: " << chuViHinhVuong(a) << endl;
+	case 'ltpc':
+		luyenTapPhepCong();
 	default:
 		cout << "Chon sai phep toan";
 		break;
@@ -69,4 +72,18 @@ float chuViHinhTron(int a){
 
 int chuViHinhVuong(int a) {
 	return a*4;
+}
+
+void luyenTapPhepCong() {
+	int v1 = rand() % 100 + 1;
+	int v2 = rand() % 100 + 1;
+	int result;
+	
+	cout << "Tong " << v1 << "+" << v2 << "= ";
+	cin >> result;
+	if (v1 + v2 == result) {
+		count << "Dap an chinh xac";
+	} else {
+		cout << "Dap an sai";
+	}
 }
