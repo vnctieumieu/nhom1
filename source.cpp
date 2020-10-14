@@ -31,6 +31,8 @@ int main()
 	case '/':
 		cout<<a<<" / "<<b<<" = "<< thuong(a,b)<<endl;
 		break;
+	case 'cvhv':
+		count << "chu vi hinh vuong: " << chuViHinhVuong(a) << endl;
 	default:
 		cout << "Chon sai phep toan";
 		break;
@@ -60,3 +62,7 @@ float chuvihcn(int dai, int rong)
 		cout<<"chu vi hinh chu nhat la"<<(dai+rong)*2;
 		
 }
+
+int chuViHinhVuong(int a) {
+	return a*4;
+} 
