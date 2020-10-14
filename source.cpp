@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include<time.h>
 int tong(int a, int b){
 	int kq = 0;
 	kq = a + b;
@@ -52,6 +53,23 @@ void luyenTapPhepCong() {
 		cout << "Dap an sai";
 	}
 }
+void ltpt(){
+		int a, b, rand1, rand2;
+		srand(time(0));
+		rand1 = rand() % 100;
+		rand2 = rand() % 100;
+		cout << rand1 << " - " << rand2 << " = " << rand1 - rand2 << endl;
+		cout << "Nguoi dung kiem tra!" << endl;
+		cout << "Nhap a" << endl;
+		cin >> a;
+		cout <<"Nhap b" << endl;
+		cin >> b;
+		cout << "KQ " << a <<" - " << b << " = " << hieu(a,b) << endl;
+		if (hieu(a,b) == (rand1 - rand2))
+		{
+			cout <<" Ye Ye ket qua dung roi " << endl;
+		}			
+	}
 int main()
 {
 	int a, b;
@@ -62,7 +80,7 @@ int main()
 	cout <<"Nhap ban kinh hinh tron" << endl;
 	cout << "A o tren dong thoi la chieu dai hnc va canh hv. B la chieu rong hcn" << endl;
 	cin >> r;
-	cout << "Tinh gi? (+,-,*,/,cn,v,tron,cvhcn,cvhv,cvht,ltpc) ";
+	cout << "Tinh gi? (+,-,*,/,cn,v,tron,cvhcn,cvhv,cvht,ltpt,ltpc) ";
 	cin >> ch;
 	switch (phepToan)
 	{
@@ -96,9 +114,12 @@ int main()
 	case 'tron':
 		cout <<"Dien tich hinh tron la: " << dientichhht(r) << " m^2 " << endl; 
 		break;
-	case 'ltpc'
+	case 'ltpc':
 		luyenTapPhepCong();
 		break;
+	case 'ltpt':
+		ltpt();
+		break;	
 	default:
 		cout << "Chon sai phep toan or sai hinh";
 		break;	
