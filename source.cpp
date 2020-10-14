@@ -63,7 +63,7 @@ int main()
 	cout <<"Nhap ban kinh hinh tron" << endl;
 	cout << "A o tren dong thoi la chieu dai hnc va canh hv. B la chieu rong hcn" << endl;
 	cin >> r;
-	cout << "Tinh gi? (+,-,*,/,cn,v,tron,cvhcn,cvhv,cvht) ";
+	cout << "Tinh gi? (+,-,*,/,cn,v,tron,cvhcn,cvhv,cvht,ltpc) ";
 	cin >> ch;
 	switch (phepToan)
 	{
