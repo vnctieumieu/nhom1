@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 #include<time.h>
 int tong(int a, int b){
@@ -15,25 +15,24 @@ int tich(int a, int b) {
 }
 
 float thuong(int a, int b){
-	return a/b;
+	return (float)a/b;
 }
 int dientichhcn(int a, int b){
 	return a*b;
 }
 int dientichhv(int a){
-	return pow(a,2);
+	return a * a;
 }
 int dientichht(int r){
-	return 3,14 * pow(r,2);  // dien Pi * (ban kinh) ^ 2
+	return 3,14 * r * r;  // dien Pi * (ban kinh) ^ 2
 }
-float chuvihcn(int dai, int rong)
+int chuvihcn(int dai, int rong)
 {	
 	    int kq = ( dai + rong ) * 2;
-		cout<<"chu vi hinh chu nhat la"<< kq ; // lan sau kg dc nhap xuat tham so truyen trong ham va khong dc cout trong ham.
 		return kq;
 }
 
-float chuViHinhTron(int a){
+double chuViHinhTron(int a){
 	return 2*3.14*a;
 }
 
@@ -48,81 +47,149 @@ void luyenTapPhepCong() {
 	cout << "Tong " << v1 << "+" << v2 << "= ";
 	cin >> result;
 	if (v1 + v2 == result) {
-		count << "Dap an chinh xac";
+		cout << "Dap an chinh xac";
 	} else {
 		cout << "Dap an sai";
 	}
 }
 void ltpt(){
-		int a, b, rand1, rand2;
-		srand(time(0));
-		rand1 = rand() % 100;
-		rand2 = rand() % 100;
-		cout << rand1 << " - " << rand2 << " = " << rand1 - rand2 << endl;
-		cout << "Nguoi dung kiem tra!" << endl;
-		cout << "Nhap a" << endl;
-		cin >> a;
-		cout <<"Nhap b" << endl;
-		cin >> b;
-		cout << "KQ " << a <<" - " << b << " = " << hieu(a,b) << endl;
-		if (hieu(a,b) == (rand1 - rand2))
-		{
-			cout <<" Ye Ye ket qua dung roi " << endl;
-		}			
+	int v1 = rand() % 100 + 1;
+	int v2 = rand() % 100 + 1;
+	int result;
+
+	cout << " Tru" << v1 << "-" << v2 << "= ";
+	cin >> result;
+	if (v1 - v2 == result) {
+		cout << "Dap an chinh xac";
 	}
+	else {
+		cout << "Dap an sai";
+	}
+}
 int main()
-{
-	int a, b;
-	char phepToan;
-	cout << "Nhap 2 so nguyen: ";
-	cin >> a >> b;
-	int r;
-	cout <<"Nhap ban kinh hinh tron" << endl;
-	cout << "A o tren dong thoi la chieu dai hnc va canh hv. B la chieu rong hcn" << endl;
-	cin >> r;
-	cout << "Tinh gi? (+,-,*,/,cn,v,tron,cvhcn,cvhv,cvht,ltpt,ltpc) ";
-	cin >> ch;
-	switch (phepToan)
+{	
+	cout << "Do nhom minh luoi :(( nen lam menu so so thoi cac ban thong cam Please!!!!" << endl;
+	int option;
+	cout << "1.bai toan so nguyen || 2. bai toan hinh hoc || 3. bai toan luyen tap " << endl;
+	cin >> option;
+	while (1)
 	{
-	case '+':
-		cout << "Tong " << a << " & " << b <<" = " << tong(a,b);
+	switch (option)
+	{
+	case 1:
+		cout << "ban da den voi bai toan so nguyen" << endl;
+		int a, b;
+		char phepToan;
+		cout << "Nhap lan luot 2 so nguyen" << endl;
+		cout << "Nhap so nguyen thu 1: ";
+		cin >> a;
+		cout << endl;
+		cout << "Nhap so nguyen thu 2: ";
+		cin >> b;
+		cout << endl;
+		cout << "Tinh gi? (+,-,*,/) ";
+		cin >> phepToan;
+		switch (phepToan)
+		{
+		case '+':
+			cout << "Tong " << a << " & " << b << " = " << tong(a, b);
+			break;
+		case '-':
+			cout << a << "-" << b << "= " << hieu(a, b) << endl;
+			break;
+		case '*':
+			cout << a << " * " << b << " = " << tich(a, b) << endl;
+			break;
+		case '/':
+			cout << a << " / " << b << " = " << thuong(a, b) << endl;
+			break;
+		default:
+			cout << "Chon sai phep toan or sai hinh";
+			break;
+		}
+		int op;
+		cout << "Ban co muon quay lai bai toan so nguyen: 1. Co || 2. Ve Menu" << endl;
+		cin >> op;
+		if (op == 1)
+			continue;
+		else
+			break;
 		break;
-	case '-':
-		cout << a << "-" << b << "= " << hieu(a,b) << endl;
+	case 2:
+		cout << "ban da den voi bai toan ve hinh hoc" << endl;
+		cout << "Chon hinh hoc ban muon: 1. Hinh Chu Nhat | 2. Hinh Tron | 3. Hinh Vuong" << endl;
+		int option;
+		cin >> option;
+		switch (option)
+		{
+		case 1: cout << "Cho toi xin info hinh chu nhat nao!" << endl;
+			int cd, cr;
+			cout << "Nhap chieu dai: ";
+			cin >> cd;
+			cout << endl;
+			cout << "Nhap chieu rong: ";
+			cin >> cr;
+			cout << endl;
+			cout << "Chu vi hinh chu nhat la: " << chuvihcn(cd, cr) << endl;
+			cout << "Dien tich hinh chu nhat la:  " << dientichhcn(cd, cr) << endl;
+			break;
+		case 2: cout << "Cho toi xin info hinh tron nao!" << endl;
+			int r, d;
+			cout << "Nhap ban kinh: ";
+			cin >> r;
+			cout << endl;
+			cout << "Chu vi hinh tron la: " << chuViHinhTron(r) << endl;
+			cout << "Dien tich hinh tron la: " << dientichht(r) << endl;
+			break;
+		case 3: cout << "Cho toi xin info hinh vuong nao!" << endl;
+			int a;
+			cout << "Nhap do dai canh hinh vuong ";
+			cin >> a;
+			cout << endl;
+			cout << "Chu vi hinh vuong la: " << chuViHinhVuong(a) << endl;
+			cout << "Dien tich hinh vuong la:  " << dientichhv(a) << endl;
+			break;
+		default:
+			break;
+		}
+		int op2;
+		cout << "Ban co muon quay lai bai toan hinh hoc: 1. Co || 2. Ve Menu" << endl;
+		cin >> op2;
+		if (op2 == 1)
+			continue;
+		else
+			break;
 		break;
-	case '*':
-		cout << a << " * " << b << " = " << tich(a,b) << endl;
+	case 3: 
+	cout << "Ban da den voi bai toan luyen tap!" << endl;
+	cout << "1. Luyen tap phep cong | 2. Luyen tap phep tru" << endl;
+		int luachon;
+		cin >> luachon;
+		cout << endl;
+		switch (luachon)
+		{
+			case 1: cout << "Luyen tap phep cong!! Hello" << endl;
+			luyenTapPhepCong();
+			break;
+			case 2: cout << "Luyen tap phep tru!! Hello" << endl;
+			ltpt();
+			break;
+			default:
+			break;
+		}
+		int op3;
+		cout << "Ban co muon quay lai bai toan luyen tap: 1. Co || 2. Ve Menu" << endl;
+		cin >> op3;
+		if (op3 == 1)
+			continue;
+		else
+			break;
 		break;
-	case '/':
-		cout<<a<<" / "<<b<<" = "<< thuong(a,b)<<endl;
-		break;
-	case 'cvhcn':
-		count << "chu vi hinh chu nhat: " << chuvihcn(a, b) << endl;
-		break;
-	case 'cvhv':
-		count << "chu vi hinh vuong: " << chuViHinhVuong(a) << endl;
-		break;
-	case 'cvht':
-		count << "chu vi hinh tron: " << chuViHinhTron(r) << endl;
-		break;
-	case 'cn': 
-		cout <<"Dien tich hinh cn la: " << dientichhcn(a,b) << " m^2 " << endl; 
-		break;
-	case 'v':
-		cout <<"Dien tich hinh vuong la: " << dientichhv(a) << " m^2 " << endl; 
-		break;
-	case 'tron':
-		cout <<"Dien tich hinh tron la: " << dientichhht(r) << " m^2 " << endl; 
-		break;
-	case 'ltpc':
-		luyenTapPhepCong();
-		break;
-	case 'ltpt':
-		ltpt();
-		break;	
 	default:
-		cout << "Chon sai phep toan or sai hinh";
-		break;	
+		break;
 	}
+	cout << "1.bai toan so nguyen || 2. bai toan hinh hoc || 3. bai toan luyen tap " << endl;
+	cin >> option;
+}
 	return 0;
 }
